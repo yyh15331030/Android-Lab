@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.asus.project3.InfoActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorLine" >
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/bgimage"
+            android:layout_width="250dp"
+            android:layout_height="450dp"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/empty_star" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="7dp"
+            android:textSize="15sp"
+            android:textColor="@color/colorBlack"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/information"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/info1"
+                android:layout_alignStart="@id/information"
+                android:layout_below="@id/information"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorGray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/info2"
+                android:layout_marginStart="16dp"
+                android:layout_alignBottom="@+id/info1"
+                android:textSize="15sp"
+                android:textColor="@color/colorGray"
+                android:layout_toEndOf="@id/info1" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/buy"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@id/buy"
+                android:background="@color/colorLine"/>
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/buy"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@id/information"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/shoplist"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/line"
+                android:layout_alignStart="@id/info1"
+                android:layout_below="@id/info1"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorLine" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/more"
+                android:layout_below="@id/line">
+            </ListView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/more"
+                android:background="@color/colorLine"/>
+        </RelativeLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listview">
+        </ListView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.project3.MainActivity">
+
+    <!--商品列表-->
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_view"
+        android:background="@color/colorWhite"/>
+
+    <!--购物车列表-->
+    <ListView
+        android:visibility="gone"
+        android:id="@+id/shoppinglist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--悬浮按钮-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatbutton"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/shoplist"
+        app:backgroundTint="@color/cardview_light_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:rippleColor="@color/colorWhite" />
+
+</android.support.constraint.ConstraintLayout>
